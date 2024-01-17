@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl md:text-3xl font-bold text-primaryColor;
+  }
+  h2 {
+    @apply text-primaryColor text-xl md:text-2xl font-bold;
+  }
+  img {
+    @apply select-none;
+  }
+}
+
+@layer components {
+  .layer1 {
+    @apply z-[9];
+  }
+  .layer2 {
+    @apply z-[99];
+  }
+  .layer3 {
+    @apply z-[999];
+  }
+  .layer4 {
+    @apply z-[9999];
+  }
+  .layer5 {
+    @apply z-[99999];
+  }
+  .navTabIcon {
+    @apply size-9 sm:size-12 bg-whiteColor/20 scale-100 hover:bg-whiteColor/50 hover:scale-[0.8] grid place-items-center flex-shrink-0 rounded-full text-whiteColor text-xl sm:text-2xl overflow-hidden cursor-pointer border-2 border-transparent commonAnim;
+  }
+  .navMobileTab {
+    @apply w-full p-2 bg-grayColor/5 hover:bg-grayColor/15 flex justify-start items-center gap-2 cursor-pointer commonAnim;
+  }
+  .navMobileTabIcon {
+    @apply size-8 sm:size-10 rounded-full bg-primaryColor text-whiteColor grid place-items-center text-xl commonAnim;
+  }
+  .btnFill1 {
+    @apply w-full bg-primaryColor hover:bg-secondaryColor text-whiteColor border border-primaryColor text-sm md:text-base font-normal rounded-md py-2 px-4 text-center cursor-pointer select-none capitalize;
+  }
+  .input1 {
+    @apply w-full px-3 py-2 text-sm md:text-base text-secondaryColor placeholder:text-secondaryColor/80 border-b-2 border-primaryColor outline-none;
+  }
+  .input2 {
+    @apply w-full text-sm md:text-base text-secondaryColor placeholder:text-secondaryColor/80 border-none outline-none;
+  }
+  .searchInpStyle {
+    @apply p-1 border-2 border-primaryColor flex justify-between items-center text-secondaryColor;
+  }
+  .threeDotPopupButton {
+    @apply p-2 text-base md:text-lg text-primaryColor capitalize cursor-pointer hover:bg-grayColor/10 select-none flex justify-start items-center gap-3;
+  }
+  .commonAnim {
+    @apply transition-all duration-150 ease-in-out;
+  }
+  .popupWrapper {
+    @apply fixed top-0 left-0 z-[999] w-full h-full bg-whiteColor/20 grid place-items-center;
+  }
+  .floatingActionBtn1 {
+    @apply fixed size-9 md:size-12 rounded-full bg-primaryColor border-primaryColor grid place-items-center text-whiteColor text-lg md:text-2xl right-2 bottom-2 cursor-pointer z-[9999];
+  }
+}
+
+.mobileNavLinkCustomCSS a.active {
+  background: rgb(19, 42, 19) !important;
+}
+.mobileNavLinkCustomCSS a.active span:first-child {
+  background: #ffffff;
+  color: rgb(19, 42, 19) !important;
+}
+.mobileNavLinkCustomCSS a.active span {
+  color: #ffffff !important;
+}
+
+.fullScreenNavLinks a.active {
+  background: rgba(255, 255, 255, 0.5) !important;
+  scale: 0.8;
+  border-color: #ffffff;
+}
